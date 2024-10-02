@@ -1,7 +1,7 @@
 import React from 'react';
 import './PhoneCard.css';
 
-export default function PhoneCard({ img, name, price, items, increaseItems, decreaseItems }) {
+export default function PhoneCard({ img, name, price, items, increaseItems, decreaseItems, removeItem }) {
   return (
     <>
       <div className="containerCard">
@@ -10,7 +10,7 @@ export default function PhoneCard({ img, name, price, items, increaseItems, decr
           <div className="details">
             <h3>{name}</h3>
             <span>${price}</span>
-            <button id="remove">Remove</button>
+            <button id="remove" onClick={removeItem}>Remove</button> {/* Call removeItem on click */}
           </div>
         </div>
         <div className="right">
